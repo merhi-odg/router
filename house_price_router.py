@@ -29,7 +29,7 @@ def action(data):
     
 def callEngine(engine_name, payload):
     
-    url = 'http://localhost:8090/' + engine_name + urlendpoint
+    url = 'http://gateway:8090/' + engine_name + urlendpoint + '?timeout=10000'
     
     response = requests.post(url, json=payload)
     
