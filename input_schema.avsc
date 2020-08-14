@@ -1,6 +1,6 @@
 {
    "type": "record",
-   "name": "house_price_router_schema_in",
+   "name": "input_schema.avsc",
    "fields": [
       {
          "name": "YrSold",
