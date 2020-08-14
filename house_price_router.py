@@ -7,9 +7,9 @@ import pandas as pd
 # modelop.init
 def begin():
     global lasso_engine, ridge_engine, urlendpoint
-    lasso_engine = 'engine-ds-2'
-    ridge_engine = 'engine-ds-3'
-    urlendpoint = "/2/active/model/roundtrip/0/1"
+    lasso_engine = 'engine-2'
+    ridge_engine = 'engine-1'
+    urlendpoint = '/api/roundtrip/0/1'
     pass
 
 # modelop.score
@@ -29,9 +29,7 @@ def action(data):
     
 def callEngine(engine_name, payload):
     
-    #url = "http://" + engine_name + ":8003" + urlendpoint + "?timeout=2000"
-    url = 'http://7b4e4b9b-mocaasin-modelopi-4fff-690205531.us-east-2.elb.amazonaws.com/' + \
-            engine_name + urlendpoint
+    url = 'http://localhost:8090/' + engine_name + urlendpoint
     
     response = requests.post(url, json=payload)
     
