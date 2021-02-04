@@ -1,5 +1,5 @@
-# fastscore.schema.0: input_schema.avsc
-# fastscore.slot.1: in-use
+# modelop.schema.0: input_schema.avsc
+# modelop.slot.1: in-use
 
 import requests
 import pandas as pd
@@ -43,4 +43,4 @@ def callEngine(engine_name, payload):
 
 # modelop.metrics
 def metrics(datum):
-    yield {"foo": 1}
+    yield {"foo": "bar"}
